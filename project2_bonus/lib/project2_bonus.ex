@@ -67,7 +67,7 @@ PushSum_Line_2D_3Ddefmodule TopologyStarter do
     converger(noNodes,"gossip",to_be_failed)
   end
 
-  def gossipRandom2D(noNodes,to_be_failed) do
+  def gossipRandom2D(noNodes,to_be_failed) do  # here consider as neighbour nodes if the distance between either x or y coordinates is 0.1
     listx = 1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end)
     listy =1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end)
     for i <- 0..noNodes-1 do
@@ -219,7 +219,7 @@ PushSum_Line_2D_3Ddefmodule TopologyStarter do
     converger(noNodes,"push-sum",to_be_failed)
   end
 
-  def pushSumRandom2D(noNodes,to_be_failed) do
+  def pushSumRandom2D(noNodes,to_be_failed) do # here consider as neighbour nodes if the distance between either x or y coordinates is 0.1
     listx = 1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end)
     listy =1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end)
     for i <- 0..noNodes-1 do

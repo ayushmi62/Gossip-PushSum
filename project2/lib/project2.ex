@@ -67,7 +67,7 @@ defmodule TopologyStarter do
     converger(noNodes,"gossip")  # starts convergence of the nodes created
   end
 
-  def gossipRandom2D(noNodes) do
+  def gossipRandom2D(noNodes) do # here consider as neighbour nodes if the distance between either x or y coordinates is 0.1
     listx = 1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end) # get list of x-coordinates for each of the nodes
     listy =1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end)  # get list of y-coordinates for each of the nodes
     for i <- 0..noNodes-1 do
@@ -216,7 +216,7 @@ defmodule TopologyStarter do
     converger(noNodes,"push-sum")
   end
 
-  def pushSumRandom2D(noNodes) do
+  def pushSumRandom2D(noNodes) do  # here consider as neighbour nodes if the distance between either x or y coordinates is 0.1
     listx = 1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end)
     listy =1..noNodes |> Enum.map(fn _ -> Enum.random(1..100000)/100000 end)
     for i <- 0..noNodes-1 do
