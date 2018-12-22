@@ -3,10 +3,6 @@ COP5615 - Distributed Operating Systems Principles Project 2
 
 The goal of this project is to determine the convergence of Gossip and Push-Sum algorithms for different topologies through a simulator based on actors written in Elixir.
 
-## Group Information
-* **Ayush Mittal** - *UF ID: 3777 8171*
-* **Shivaditya Jatar** - *UF ID: 6203 9241*
-
 ## Contents of this file
 
 Flow of Program, Prerequisites, Instruction Section, What is working, Largest network dealt with for each type of topology and algorithm
